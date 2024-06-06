@@ -1,0 +1,31 @@
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px; /* Ensure horizontal scrollbar is also styled */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px; /* Added border-radius for track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dddddd35;
+  border-radius: 6px; /* Adjusted to ensure rounded corners */
+  border: 3px solid transparent; /* To give some spacing around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e0e0e0; /* Slightly different color on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dddddd35 transparent;
+}
+
+html {
+  scrollbar-color: #dddddd35 transparent;
+  scrollbar-width: thin;
+}

@@ -1,4 +1,4 @@
-import "./list.css";
+import "./List.css";
 import UserInfo from "./userInfo/UserInfo";
 import ChatList from "./chatList/ChatList";
 

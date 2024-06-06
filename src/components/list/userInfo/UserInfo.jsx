@@ -1,4 +1,4 @@
-import "./userInfo.css";
+import "./UserInfo.css";
 
 const UserInfo = () => {
   return (

@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/scrollbar.css";
 import List from "./components/list/List";
 import Chat from "./components/chat/Chat";
 import Detail from "./components/detail/Detail";
