@@ -4,6 +4,9 @@
 
   border-left: 1px solid #dddddd35;
   border-right: 1px solid #dddddd35;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .chat-top {
@@ -14,42 +17,106 @@
   border-bottom: 1px solid #dddddd35;
 }
 
-.user-info {
+.chat-top .user-info {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.user-info img {
+.chat-top .user-info img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.texts {
+.chat-top .texts {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.texts span {
+.chat-top .texts span {
   font-size: 18px;
   font-weight: bold;
 }
 
-.texts p {
+.chat-top .texts p {
   font-size: 14px;
   font-weight: 300;
   color: #a5a5a5;
 }
 
-.icons {
+.chat-top .icons {
   display: flex;
   gap: 20px;
 }
 
-.icons img {
+.chat-top .icons img {
   width: 20px;
   height: 20px;
+}
+
+.chat-center {
+  padding: 20px;
+  flex: 1;
+}
+
+.chat-bottom {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dddddd35;
+  gap: 20px;
+
+  margin-top: auto;
+}
+
+.chat-bottom .icons {
+  display: flex;
+  gap: 20px;
+}
+
+.chat-bottom .icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.chat-bottom input {
+  flex: 1;
+  background-color: #11192880;
+  border: none;
+  outline: none;
+  color: #fff;
+
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.chat-bottom .send-button {
+  background-color: #5183fe;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-bottom .emoji img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.chat-bottom .emoji {
+  position: relative;
+}
+
+.chat-bottom .emoji .emoji-picker {
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
 }

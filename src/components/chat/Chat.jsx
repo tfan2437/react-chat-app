@@ -1,6 +1,20 @@
 import "./Chat.css";
+import { useState } from "react";
+import EmojiPicker from "emoji-picker-react";
 
 const Chat = () => {
+  const [emojiMenu, setEmojiMenu] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleAddEmoji = (e) => {
+    setMessage((prev) => prev + e.emoji);
+    setEmojiMenu(false);
+  };
+
   return (
     <div className="chat-container">
       <div className="chat-top">
@@ -17,8 +31,47 @@ const Chat = () => {
           <img src="./info.png" alt="" />
         </div>
       </div>
-      <div className="chat-center"></div>
-      <div className="chat-bottom"></div>
+      <div className="chat-center">
+        <div className="message">
+          <img src="./avatar.png" alt="" />
+          <div className="texts">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              rem minus assumenda, animi ducimus deleniti ipsum corporis,
+              dolorem tempora id, iste culpa? Accusamus natus officia doloribus
+              eius accusantium ullam iure.
+            </p>
+            <span>1 min ago</span>
+          </div>
+        </div>
+      </div>
+      <div className="chat-bottom">
+        <div className="icons">
+          <img src="./img.png" alt="" />
+          <img src="./camera.png" alt="" />
+          <img src="./mic.png" alt="" />
+        </div>
+        <input
+          type="text"
+          placeholder="Type a message..."
+          value={message}
+          onChange={(e) => handleMessageChange(e)}
+        />
+        <div className="emoji">
+          <img
+            src="./emoji.png"
+            alt=""
+            onClick={() => setEmojiMenu((prev) => !prev)}
+          />
+          <div className="emoji-picker">
+            <EmojiPicker
+              open={emojiMenu}
+              onEmojiClick={(e) => handleAddEmoji(e)}
+            />
+          </div>
+        </div>
+        <button className="send-button">Send</button>
+      </div>
     </div>
   );
 };
