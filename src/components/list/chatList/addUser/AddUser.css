@@ -1,0 +1,64 @@
+.add-user-container {
+  width: max-content;
+  height: max-content;
+
+  padding: 30px;
+  background-color: #111928cc;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.add-user-container form {
+  display: flex;
+  gap: 20px;
+}
+
+.add-user-container input {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.add-user-container button {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.add-user-container .user {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-user-container .user .detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-user-container .user .detail img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.add-user-container .user button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
